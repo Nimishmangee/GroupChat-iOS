@@ -147,7 +147,7 @@ extension ChatViewController:UITableViewDataSource{
         if message.sender==Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden=true;
             cell.rightImageView.isHidden=false;
-            cell.messageBubble.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+            cell.messageBubble.backgroundColor = #colorLiteral(red: 0.5260234475, green: 0.9091125131, blue: 0.9875254035, alpha: 1)
             cell.label.textColor=UIColor.black
         }
         
@@ -155,7 +155,7 @@ extension ChatViewController:UITableViewDataSource{
         else{
             cell.leftImageView.isHidden=false;
             cell.rightImageView.isHidden=true;
-            cell.messageBubble.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+            cell.messageBubble.backgroundColor = #colorLiteral(red: 0.9271799922, green: 0.9821534753, blue: 0.994110167, alpha: 1)
             cell.label.textColor=UIColor.black
         }
         
