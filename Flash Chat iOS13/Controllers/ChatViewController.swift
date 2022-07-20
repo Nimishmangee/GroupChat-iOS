@@ -23,6 +23,17 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Below code will fix Navigation bar issue fixed for iOS 15.0
+                if #available(iOS 15, *) {
+                    let appearance = UINavigationBarAppearance()
+                    appearance.configureWithOpaqueBackground()
+                    self.navigationController?.navigationBar.isTranslucent = true  // pass "true" for fixing iOS 15.0 black bg issue
+                    self.navigationController?.navigationBar.tintColor = UIColor.white // We need to set tintcolor for iOS 15.0
+                    appearance.shadowColor = .clear    //removing navigationbar 1 px bottom border.
+                    UINavigationBar.appearance().standardAppearance = appearance
+                    UINavigationBar.appearance().scrollEdgeAppearance = appearance
+                }
+        
         tableView.dataSource=self;
         title=K.appName;
         navigationItem.hidesBackButton=true;
@@ -136,16 +147,16 @@ extension ChatViewController:UITableViewDataSource{
         if message.sender==Auth.auth().currentUser?.email {
             cell.leftImageView.isHidden=true;
             cell.rightImageView.isHidden=false;
-            cell.messageBubble.backgroundColor=UIColor(named: K.BrandColors.lightPurple)
-            cell.label.textColor=UIColor(named: K.BrandColors.purple)
+            cell.messageBubble.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+            cell.label.textColor=UIColor.black
         }
         
         //This is a message from other sender
         else{
             cell.leftImageView.isHidden=false;
             cell.rightImageView.isHidden=true;
-            cell.messageBubble.backgroundColor=UIColor(named: K.BrandColors.purple)
-            cell.label.textColor=UIColor(named: K.BrandColors.lightPurple)
+            cell.messageBubble.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+            cell.label.textColor=UIColor.black
         }
         
         return cell;

@@ -21,17 +21,17 @@
                         <rect key="frame" x="10" y="10" width="423" height="181"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="XDP-wm-spk">
-                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0Bn-4L-8fJ"/>
-                                    <constraint firstAttribute="width" constant="40" id="8i5-Zn-xbF"/>
+                                    <constraint firstAttribute="height" constant="50" id="Hk8-kb-0U5"/>
+                                    <constraint firstAttribute="width" constant="50" id="fvI-jn-RFi"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr2-Ju-LVd">
-                                <rect key="frame" x="60" y="0.0" width="303" height="50"/>
+                                <rect key="frame" x="70" y="0.0" width="283" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHE-rU-AbZ">
-                                        <rect key="frame" x="10" y="10" width="283" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="263" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="BrandLightPurple"/>
                                         <nil key="highlightedColor"/>
@@ -40,6 +40,7 @@
                                 <color key="backgroundColor" name="BrandPurple"/>
                                 <color key="tintColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.15294116739999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bRN-h4-lCn"/>
                                     <constraint firstAttribute="bottom" secondItem="LHE-rU-AbZ" secondAttribute="bottom" constant="10" id="gTN-NG-cLD"/>
                                     <constraint firstItem="LHE-rU-AbZ" firstAttribute="top" secondItem="Cr2-Ju-LVd" secondAttribute="top" constant="10" id="iQW-df-Shg"/>
                                     <constraint firstAttribute="trailing" secondItem="LHE-rU-AbZ" secondAttribute="trailing" constant="10" id="pJQ-iZ-ibo"/>
@@ -47,10 +48,10 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="7I4-tH-dXM">
-                                <rect key="frame" x="383" y="0.0" width="40" height="40"/>
+                                <rect key="frame" x="373" y="0.0" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="2Ak-xi-aFH"/>
-                                    <constraint firstAttribute="height" constant="40" id="dqf-ON-8f3"/>
+                                    <constraint firstAttribute="height" constant="50" id="PJz-8z-yN0"/>
+                                    <constraint firstAttribute="width" constant="50" id="oJ0-nC-yfN"/>
                                 </constraints>
                             </imageView>
                         </subviews>
