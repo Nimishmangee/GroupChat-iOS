@@ -23,17 +23,6 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Below code will fix Navigation bar issue fixed for iOS 15.0
-                if #available(iOS 15, *) {
-                    let appearance = UINavigationBarAppearance()
-                    appearance.configureWithOpaqueBackground()
-                    self.navigationController?.navigationBar.isTranslucent = true  // pass "true" for fixing iOS 15.0 black bg issue
-                    self.navigationController?.navigationBar.tintColor = UIColor.white // We need to set tintcolor for iOS 15.0
-                    appearance.shadowColor = .clear    //removing navigationbar 1 px bottom border.
-                    UINavigationBar.appearance().standardAppearance = appearance
-                    UINavigationBar.appearance().scrollEdgeAppearance = appearance
-                }
-        
         tableView.dataSource=self;
         title=K.appName;
         navigationItem.hidesBackButton=true;
@@ -142,19 +131,21 @@ extension ChatViewController:UITableViewDataSource{
         
         let cell=tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.label.text=messages[indexPath.row].body;
+        cell.leftLabel.text=message.sender
+        cell.rightLabel.text=message.sender
         
         //This is a message from the current user
         if message.sender==Auth.auth().currentUser?.email {
-            cell.leftImageView.isHidden=true;
-            cell.rightImageView.isHidden=false;
+            cell.leftView.isHidden=true;
+            cell.rightView.isHidden=false;
             cell.messageBubble.backgroundColor = #colorLiteral(red: 0.5260234475, green: 0.9091125131, blue: 0.9875254035, alpha: 1)
             cell.label.textColor=UIColor.black
         }
         
         //This is a message from other sender
         else{
-            cell.leftImageView.isHidden=false;
-            cell.rightImageView.isHidden=true;
+            cell.leftView.isHidden=false;
+            cell.rightView.isHidden=true;
             cell.messageBubble.backgroundColor = #colorLiteral(red: 0.9271799922, green: 0.9821534753, blue: 0.994110167, alpha: 1)
             cell.label.textColor=UIColor.black
         }
