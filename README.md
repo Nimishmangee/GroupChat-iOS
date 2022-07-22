@@ -7,7 +7,7 @@ Group Chat is an internet based group messaging app somewhat similar to Telegram
 Firebase Firestore will be used as backend service for authentication and storing and retrieving messages
 
 
-## This App will:
+## This App will
 
 * Integrate third party libraries using Cocoapods and Swift Package Manager.
 * Store data in the cloud using Firebase Firestore.
@@ -17,7 +17,7 @@ Firebase Firestore will be used as backend service for authentication and storin
 * How to create direct Segues for navigation.
 
 
-# Constants
+## Constants
 ```
 struct K {
     static let appName="⚡️GroupChat"
