@@ -20,6 +20,8 @@ class ChatViewController: UIViewController {
     
     var messages:[Message]=[]
     
+    var namesOFUsers:[String:String]=[:];
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +36,27 @@ class ChatViewController: UIViewController {
     
     func loadMessages(){
         
+        db.collection(K.FStore.userCollectionName)
+            .addSnapshotListener { querySnapshot, error in
+                
+                self.namesOFUsers=[:]
+            
+            if let e=error{
+                print("There was an issue  retrieving data, \(e)")
+            }else{
+                if let snapshotDocuments=querySnapshot?.documents{
+                    for doc in snapshotDocuments{
+                        let data=doc.data()
+                        if let messsageSender=data[K.FStore.senderField] as? String, let userName=data[K.FStore.nameField] as? String{
+                            
+                            self.namesOFUsers[messsageSender]=userName
+                        }
+                    }
+                }
+            }
+        }
+        
+        
         db.collection(K.FStore.collectionName)
             .order(by: K.FStore.dateField)
             .addSnapshotListener { querySnapshot, error in
@@ -46,8 +69,8 @@ class ChatViewController: UIViewController {
                 if let snapshotDocuments=querySnapshot?.documents{
                     for doc in snapshotDocuments{
                         let data=doc.data()
-                        if let messsageSender=data[K.FStore.senderField] as? String, let messageBody=data[K.FStore.bodyField] as? String{
-                            let newMessage=Message(sender: messsageSender, body: messageBody)
+                        if let messsageSender=data[K.FStore.senderField] as? String, let messageBody=data[K.FStore.bodyField] as? String, let userName=data[K.FStore.nameField]as? String{
+                            let newMessage=Message(sender: messsageSender, body: messageBody, name:userName)
                             self.messages.append(newMessage)
                             
                             DispatchQueue.main.async {
@@ -68,7 +91,8 @@ class ChatViewController: UIViewController {
             db.collection(K.FStore.collectionName).addDocument(data: [
                 K.FStore.senderField:messageSender,
                 K.FStore.bodyField:messageBody,
-                K.FStore.dateField:Date().timeIntervalSince1970
+                K.FStore.dateField:Date().timeIntervalSince1970,
+                K.FStore.nameField:namesOFUsers[messageSender]!
             ]) { error in
                 if let e=error{
                     print("There was an issue, \(e)")
@@ -81,7 +105,6 @@ class ChatViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     
@@ -131,8 +154,8 @@ extension ChatViewController:UITableViewDataSource{
         
         let cell=tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.label.text=messages[indexPath.row].body;
-        cell.leftLabel.text=message.sender
-        cell.rightLabel.text=message.sender
+        cell.leftLabel.text=message.name
+        cell.rightLabel.text=message.name
         
         //This is a message from the current user
         if message.sender==Auth.auth().currentUser?.email {
@@ -140,6 +163,7 @@ extension ChatViewController:UITableViewDataSource{
             cell.rightView.isHidden=false;
             cell.messageBubble.backgroundColor = #colorLiteral(red: 0.5260234475, green: 0.9091125131, blue: 0.9875254035, alpha: 1)
             cell.label.textColor=UIColor.black
+            cell.rightLabel.text="Me"
         }
         
         //This is a message from other sender

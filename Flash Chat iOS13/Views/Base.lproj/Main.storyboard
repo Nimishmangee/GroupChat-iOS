@@ -154,6 +154,31 @@
                                     <constraint firstAttribute="trailing" secondItem="jY9-l3-E1g" secondAttribute="trailing" id="y40-C4-FjS"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mcj-NT-cmF" userLabel="NameView">
+                                <rect key="frame" x="0.0" y="350" width="414" height="177"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="DM9-Z6-Ja6">
+                                        <rect key="frame" x="0.0" y="-14" width="414" height="205"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipx-va-R18" userLabel="Name">
+                                        <rect key="frame" x="48" y="50" width="323" height="45"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="1M7-Hr-ewH"/>
+                                    <constraint firstItem="DM9-Z6-Ja6" firstAttribute="top" secondItem="Mcj-NT-cmF" secondAttribute="top" constant="20" id="35f-pn-FsW"/>
+                                    <constraint firstAttribute="bottom" secondItem="DM9-Z6-Ja6" secondAttribute="bottom" constant="20" id="JL2-ib-Yek"/>
+                                    <constraint firstItem="Ipx-va-R18" firstAttribute="left" secondItem="Mcj-NT-cmF" secondAttribute="left" constant="48" id="LQj-kD-bfY"/>
+                                    <constraint firstAttribute="right" secondItem="Ipx-va-R18" secondAttribute="right" constant="48" id="Nli-Yt-5pq"/>
+                                    <constraint firstItem="DM9-Z6-Ja6" firstAttribute="leading" secondItem="Mcj-NT-cmF" secondAttribute="leading" id="OCU-8p-EPR"/>
+                                    <constraint firstItem="Ipx-va-R18" firstAttribute="top" secondItem="Mcj-NT-cmF" secondAttribute="top" constant="50" id="PLn-5g-Ftc"/>
+                                    <constraint firstAttribute="trailing" secondItem="DM9-Z6-Ja6" secondAttribute="trailing" id="U6B-u8-v4E"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ipx-va-R18" secondAttribute="bottom" constant="82" id="pnE-uq-1Q8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="stz-qy-NwU"/>
                         <color key="backgroundColor" red="0.2235293984" green="0.50980395079999996" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -169,6 +194,7 @@
                     <navigationItem key="navigationItem" title="Flash Chat" id="pM9-WB-yYM"/>
                     <connections>
                         <outlet property="emailTextfield" destination="u72-XV-6FN" id="Nfc-8N-TNr"/>
+                        <outlet property="nameTextField" destination="Ipx-va-R18" id="WxU-ex-odg"/>
                         <outlet property="passwordTextfield" destination="hLb-P9-NkF" id="uaM-fo-m8M"/>
                         <segue destination="lwd-AH-u8E" kind="show" identifier="RegisterToChat" id="knG-AY-onW"/>
                     </connections>

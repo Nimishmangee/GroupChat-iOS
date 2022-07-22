@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="75" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Til-Bb-cWw" userLabel="LeftLabel">
-                                        <rect key="frame" x="16" y="9" width="42" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" red="0.32549020649999999" green="0.62352943419999995" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -62,7 +62,7 @@
                                 <rect key="frame" x="376" y="0.0" width="75" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Me" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53b-jr-Khq" userLabel="RightLabel">
-                                        <rect key="frame" x="14" y="9" width="47" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" red="0.32156863810000003" green="0.5411764979" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
