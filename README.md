@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/82581324/180593601-b7579911-ba3e-4eb1-aa8a-2c7bf97289b5.png" alt="Icon"/>
+  <img src="https://github.com/Nimishmangee/GroupChat-iOS/issues/1#issuecomment-1193072339" alt="Icon"/>
 </p>
 <H1 align="center">GroupChat-iOS</H1>
 
