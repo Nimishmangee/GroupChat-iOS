@@ -1,4 +1,8 @@
-# GroupChat-iOS
+<p align="center">
+  <img src="https://raw.githubusercontent.com/hackiftekhar/IQKeyboardManager/master/Demo/Resources/icon.png" alt="Icon"/>
+</p>
+<H1 align="center">IQKeyboardManager</H1>
+
 
 ## Description
 
