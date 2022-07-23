@@ -10,6 +10,7 @@ Group Chat is an internet based group messaging app somewhat similar to Telegram
 
 Firebase Firestore will be used as backend service for authentication and storing and retrieving messages
 
+![Chat-Screen](https://user-images.githubusercontent.com/82581324/180593909-9035d7f1-8dc5-4d62-a111-309ad2f1d179.jpeg)
 
 ## This App will
 
