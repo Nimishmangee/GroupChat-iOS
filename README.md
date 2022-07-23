@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/hackiftekhar/IQKeyboardManager/master/Demo/Resources/icon.png" alt="Icon"/>
 </p>
-<H1 align="center">IQKeyboardManager</H1>
+<H1 align="center">GroupChat-iOS</H1>
 
 
 ## Description
@@ -49,5 +49,7 @@ struct K {
 
 ```
 ## To install 
-
-Using terminal cd to project directory, use command pod install, then launch file with .xcworkspace and it'll be all set
+1. Firebase needs to be installed and link to docs: https://firebase.google.com/docs/ios/setup
+2. pod install command needs to be run
+3. GoogleService-Info.plist needs to be replaced 
+4. IQ Keyboard Manager should be installed using Swift Package Manager, the link for same: https://github.com/hackiftekhar/IQKeyboardManager 
