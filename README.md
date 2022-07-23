@@ -12,10 +12,9 @@ Firebase Firestore will be used as backend service for authentication and storin
 
 ![RPReplay_Final1658558961_MP4_AdobeExpress](https://user-images.githubusercontent.com/82581324/180594848-7df3cf39-cd4a-49ac-9940-e64e5c62dc08.gif)
 
-<p align="right">
+<p align="center">
   <img src="https://user-images.githubusercontent.com/82581324/180594349-daf4d4d7-34c9-4511-a5a1-cd12f2424f17.jpg" alt="Icon"/>
 </p>
-![Chat-Screen](https://user-images.githubusercontent.com/82581324/180594349-daf4d4d7-34c9-4511-a5a1-cd12f2424f17.jpg)
 
 
 ## This App will
